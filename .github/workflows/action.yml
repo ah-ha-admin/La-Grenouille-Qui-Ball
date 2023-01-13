@@ -72,13 +72,5 @@ steps:
     node-version: 16
 - run: npm ci
 - run: npm test
-- name: StackHawk HawkScan Action
-  uses: stackhawk/hawkscan-action@v2.0.0
-jobs:
-  stackhawk-hawkscan:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: stackhawk/hawkscan-action@v2.0.0
-      with:
-        apiKey: ${{ secrets.HAWK_API_KEY }}
+- name: Super-Linter
+  uses: github/super-linter@v4.10.0
