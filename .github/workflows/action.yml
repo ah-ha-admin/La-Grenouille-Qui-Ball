@@ -6,7 +6,6 @@ steps:
     repo-token: ${{ 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 }}
     issue-message: '# Message with markdown.\nThis is the message that will be displayed on users' first issue.'
     pr-message: 'Message that will be displayed on users' first pr. Look, a `code block` for markdown.'
-    GITHUB_TOKEN: ${{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}}
     - name: GitHub Actions Workflow Linter
   uses: cschleiden/actions-linter@v1
 name: Lint workflows
@@ -24,3 +23,13 @@ jobs:
       - uses: cschleiden/actions-linter@v1
         with:
           workflows: '[".github/workflows/*.yaml"]'
+- name: Workflow Toggle
+  uses: StephenMP/workflow-toggle@v1.0.0
+- name: Toggle Workflow
+  uses: StephenMP/workflow-toggle@v1
+  with:
+    token: ${{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}}
+    workflow_id: YourWorkflow.yaml
+    action: enable # Or disable
+    owner: YourOrgOrUser
+    repo: YourRepo
