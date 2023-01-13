@@ -1,3 +1,5 @@
+- name: Checkout
+  uses: actions/checkout@v3.3.0
 - name: GitHub Script
   uses: actions/github-script@v6.3.3 
     Github-Token: ${{ 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 }}
