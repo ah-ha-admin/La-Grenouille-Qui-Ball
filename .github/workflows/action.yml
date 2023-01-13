@@ -32,19 +32,6 @@ jobs:
     action: enable
     owner: ah-ha-admin
     repo: La-Grenouille-Qui-Ball
-- name: AutML Workflow
-  uses: ZoranPandovski/automl-actions@v1.0.2
-job_name:
-  runs-on: ubuntu-latest
-  name: A job to train new model
-  steps:
-  - name: Train new model
-    id: train
-    uses: ZoranPandovski/automl-actions@v1.0.0
-    with:
-      dataset: "home_rentals.csv"
-      target: "price"
-      when: "{sqft: 500, rooms: 5}"
 - name: Workflow trigger
   uses: julianiag/workflow-trigger@v0.1.10
 - name: GitHub Runtime
