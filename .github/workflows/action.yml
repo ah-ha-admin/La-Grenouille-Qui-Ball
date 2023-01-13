@@ -72,5 +72,13 @@ steps:
     node-version: 16
 - run: npm ci
 - run: npm test
-- name: SonarCloud Scan
-  uses: SonarSource/sonarcloud-github-action@v1.8
+- name: StackHawk HawkScan Action
+  uses: stackhawk/hawkscan-action@v2.0.0
+jobs:
+  stackhawk-hawkscan:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: stackhawk/hawkscan-action@v2.0.0
+      with:
+        apiKey: ${{ secrets.HAWK_API_KEY }}
