@@ -8,17 +8,6 @@ steps:
     pr-message: 'Message that will be displayed on users' first pr. Look, a `code block` for markdown.'
 - name: Secrets Sync Action
   uses: google/secrets-sync-action@v1.4.1
-uses: google/secrets-sync-action@[insert version or commit]
-  with:
-    SECRETS: |
-      ^FOO$
-      ^GITHUB_.*
-    REPOSITORIES: |
-      ${{La-Grenouille-Qui-Ball}}
-    DRY_RUN: true
     GITHUB_TOKEN: ${{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}}
-    GITHUB_API_URL: ${{ secrets.CUSTOM_GITHUB_API_URL }}
-    CONCURRENCY: 10
-  env:
-    FOO: ${{github.run_id}}
-    FOOBAR: BAZ
+    - name: GitHub Actions Workflow Linter
+  uses: cschleiden/actions-linter@v1
