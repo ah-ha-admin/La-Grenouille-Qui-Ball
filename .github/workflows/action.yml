@@ -29,7 +29,20 @@ jobs:
   uses: StephenMP/workflow-toggle@v1
   with:
     token: ${{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}}
-    workflow_id: YourWorkflow.yaml
-    action: enable # Or disable
-    owner: YourOrgOrUser
-    repo: YourRepo
+    workflow_id: action.yml
+    action: enable
+    owner: ah-ha-admin
+    repo: La-Grenouille-Qui-Ball
+- name: AutML Workflow
+  uses: ZoranPandovski/automl-actions@v1.0.2
+job_name:
+  runs-on: ubuntu-latest
+  name: A job to train new model
+  steps:
+  - name: Train new model
+    id: train
+    uses: ZoranPandovski/automl-actions@v1.0.0
+    with:
+      dataset: "home_rentals.csv"
+      target: "price"
+      when: "{sqft: 500, rooms: 5}"
