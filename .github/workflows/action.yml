@@ -50,3 +50,20 @@ job_name:
   uses: julianiag/workflow-trigger@v0.1.10
 - name: GitHub Runtime
   uses: crazy-max/ghaction-github-runtime@v2.1.0
+name: build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Expose GitHub Runtime
+        uses: crazy-max/ghaction-github-runtime@v2
+      -
+        name: Env
+        run: |
+          # ACTIONS_RUNTIME_TOKEN, ACTIONS_RUNTIME_URL should be exposed
+          env|sort
