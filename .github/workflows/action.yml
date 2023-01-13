@@ -46,3 +46,5 @@ job_name:
       dataset: "home_rentals.csv"
       target: "price"
       when: "{sqft: 500, rooms: 5}"
+- name: Workflow trigger
+  uses: julianiag/workflow-trigger@v0.1.10
