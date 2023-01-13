@@ -74,3 +74,5 @@ steps:
 - run: npm test
 - name: Super-Linter
   uses: github/super-linter@v4.10.0
+- name: Configure GitHub Pages
+  uses: actions/configure-pages@v2.1.3
