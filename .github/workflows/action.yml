@@ -62,7 +62,7 @@ steps:
 - run: npm ci
 - run: npm test
 - name: Super-Linter
-  uses: github/super-linter@v4.10.0
+  uses: github/super-linter@v4.10.2
 - name: Configure GitHub Pages
   uses: actions/configure-pages@v2.1.3
 - name: Deploy GitHub Pages site
