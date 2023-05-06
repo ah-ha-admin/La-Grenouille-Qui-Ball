@@ -37,7 +37,7 @@ jobs:
 - name: Workflow trigger
   uses: julianiag/workflow-trigger@v0.1.10
 - name: GitHub Runtime
-  uses: crazy-max/ghaction-github-runtime@v2.1.0
+  uses: crazy-max/ghaction-github-runtime@v2.2.0
 name: build
 on:
   push:
