@@ -25,7 +25,7 @@ jobs:
         with:
           workflows: '[".github/workflows/*.yaml"]'
 - name: Workflow Toggle
-  uses: StephenMP/workflow-toggle@v1.0.0
+  uses: StephenMP/workflow-toggle@v2.0.1
 - name: Toggle Workflow
   uses: StephenMP/workflow-toggle@v1
   with:
